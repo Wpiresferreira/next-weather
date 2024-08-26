@@ -19,13 +19,7 @@ export default async function IpInfo(props: { ip: string | null }) {
 
   let weather = await fetch(url, options).then((res) => res.json());
 
-  let isDay;
-  
-  if(weather.current.is_day){
-    isDay = weather.current.is_day
-  }else{
-    isDay = 1;
-  }
+  let isDay = weather.current.is_day
   let bg_colors;
   if (isDay == 0) {
     bg_colors = "from-blue-300 to-sky-100 text-black";
