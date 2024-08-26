@@ -30,7 +30,7 @@ export default async function IpInfo(props: { ip: string | null }) {
   return (
     <>
     <div
-      className={` ${bg_colors} flex flex-col self-center py-6 max-w-[300px] items-center justify-center bg-gradient-to-br rounded-3xl mx-4 `}
+      className={` ${bg_colors} flex flex-col self-center p-6 max-w-[300px] items-center justify-center bg-gradient-to-br rounded-3xl mx-4 `}
       >
       <div className="flex items-center">
         <h1>{weather.location.name}</h1>
