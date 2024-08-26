@@ -21,7 +21,7 @@ export default async function IpInfo(props: { ip: string | null }) {
 
   let isDay = weather.current.is_day
   let bg_colors;
-  if (isDay == 0) {
+  if (isDay == 1) {
     bg_colors = "from-blue-300 to-sky-100 text-black";
   } else {
     bg_colors = "from-blue-800 to-black text-white";
