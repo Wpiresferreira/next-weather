@@ -20,19 +20,12 @@ export default async function IpInfo(props: { ip: string | null }) {
   };
 
   let weather = await fetch(url, options).then((res) => res.json());
-
-  let isDay;
-  
-  if(weather.current.is_day){
-    isDay = weather.current.is_day
-  }else{
-    isDay = 1;
-  }
+  console.log(weather)
   let bg_colors;
-  if (isDay == 1) {
+  if (weather.current.is_day == 1) {
     bg_colors = "from-blue-300 to-sky-100 text-black";
   } else {
-    bg_colors = "from-blue-800 to-sky-900 text-white";
+    bg_colors = "from-blue-800 to-black text-white";
   }
 
   return (
@@ -43,7 +36,7 @@ export default async function IpInfo(props: { ip: string | null }) {
         <h1>{weather.location.name}</h1>
         <img
           className="px-3"
-          src={resObj.flag.svg ?resObj.flag.svg : "https://placehold.co/600x400?text=Hello+World"}
+          src={resObj.flag.png ?resObj.flag.png : "https://placehold.co/600x400?text=Hello+World"}
           width={70}
         />
       </div>
